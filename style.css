@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #003791;
+}
+
+/* nav */
+.main-nav{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.main-nav .logo{
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+ul.nav-link{
+    margin: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 1.5rem;
+}
+
+ul.nav-link li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 2rem;
+    transition: all 0.5s;
+}
+
+ul.nav-link li a:hover{
+    text-shadow: 0 0 5px #5ab9ea;
+}
+
+
+
+ul.nav-link li:first-child a{
+    color: #5ab9ea;
+}
+
+/* content */
+.main-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.main{
+    flex: 0 0 50%;
+    margin: 3rem auto;
+}
+.main .content{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 1rem 1rem 1rem 10rem;
+}
+
+.main .content .judul-content{
+    margin-bottom: 1rem;
+    animation: animasi 3s forwards;
+}
+
+
+.main .content .judul-content h1{
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.main .content .judul-content h1:first-child{
+    color: #77bfe2;
+    font-size: 3rem;
+    margin-bottom: -1rem;
+    text-shadow: 0 0px 5px #5ab9ea;
+}
+
+.main .content .text-content{
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    animation: animasiText 3s forwards;
+}
+
+.main .content .ps{
+    display: flex;
+    padding: 0.5rem 0;
+    animation: animasiPs 3s forwards;
+}
+
+.main .content .ps span img{
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.main .content .ps span img:hover{
+    transform: translateY(-8px);
+    filter: drop-shadow(0 3px 10px #5ab9ea);
+}
+.main .content .ps span:first-child{
+    margin-right: 1.2rem;
+}
+
+.main .content .started{
+    animation: animasiPs 3s forwards;
+}
+
+.main .content .started button{
+    margin-top: 0.4rem;
+    padding: 0.3rem 2rem;
+    font-size: 1.2rem;
+    color: #003791;
+    font-weight: 600;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 1s;
+}
+
+.main .content .started button:hover{
+    opacity: 0.8;
+}
+
+.main-content .image-besar{
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.main-content .image-besar img{
+    width: 100%;
+}
+
+/* animasi */
+
+
+.animasi-besar{
+    animation: animasiBesar 2s forwards;
+}
+
+
+
+@keyframes animasi{
+    from{
+        transform: translateY(-3rem);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animasiText{
+    from{
+        transform: translateX(-3rem);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animasiPs{
+    from{
+        transform: translateY(3rem);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animasiBesar{
+    from{
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* responsive */
+
+@media screen and (max-width:768px)
+{
+    .main-content{
+        flex-direction: column;
+    }
+
+    .main .content{
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .main .content .judul-content h1{
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    
+    .main .content .judul-content h1:first-child{
+        color: #77bfe2;
+        font-size: 2rem;
+        margin-bottom: -1rem;
+    }
+    .main .content .text-content{
+        font-size: 0.8rem;
+    }
+
+    .main .content .ps{
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-content .image-besar{
+        margin-top: -2rem;
+    }
+}
+
+
+@media screen and (max-width: 500px)
+{
+    /* nav */
+    .main-nav .nav-link{
+        display: flex;
+        margin: 0 0 0 auto;
+        justify-content: flex-end;
+    }
+
+    .main-nav .nav-link li a{
+        padding: 0.5rem;
+    }
+
+    /* content */
+
+    .main-content{
+        margin-top: -1.5rem;
+    }
+
+    .main .content{
+        padding-top: 0;
+    }
+
+    .main .content .judul-content h1:first-child{
+        font-size: 2rem;
+    }
+    .main .content .judul-content h1:last-child{
+        font-size: 2.8rem;
+        padding: 0.8rem;    
+    }
+
+}
